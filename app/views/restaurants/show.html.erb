@@ -6,6 +6,9 @@
   <li><%= @restaurant.category %></li>
 </ul>
 
+<%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
+<br>
+
 <p><strong>Reviews</strong></p>
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
@@ -13,3 +16,5 @@
   <% end %>
 </ul>
 <br>
+
+<%= link_to "Return to restaurants list", restaurants_path %>
